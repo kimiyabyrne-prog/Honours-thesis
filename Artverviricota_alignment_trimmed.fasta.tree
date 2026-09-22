@@ -1,0 +1,129 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=27;
+	taxlabels
+	ABM21760_Cranberry_red_ringspot_virus_Vaccinium_macrocarpon
+	AFR79239_Bovine_foamy_virus_Bos_taurus
+	BAD98246_Rous_sarcoma_virus_-_Schmidt-Ruppin_D_
+	DBA50956_Spiretrovirus_felis8835_Felis_catus
+	DBA62696_Marsupial_endogenous_betaretrovirus_1_Sminthopsis_crassicaudata
+	Metaviridae_QBP37036_Lampyris_noctiluca_errantivirus_1_Lampyris_noctiluca__glowworm_
+	'Metaviridae_QPF16707.1_Aedes_aegypti_To_virus_1_Aedes_aegypti'
+	Metaviridae_S13LMK_k141_12006_-_ORF_2__frame_2__translation[&!color=#cc0033]
+	Metaviridae_S2BBB_k141_113958_-_ORF_1__frame_3__translation[&!color=#cc0033]
+	Metaviridae_S2BBB_k141_35924_-_ORF_2__frame_2__translation[&!color=#cc0033]
+	Metaviridae_S2BBB_k141_96837_-_ORF_4__frame_3__translation[&!color=#cc0033]
+	Metaviridae_S6FTF_k141_51199_-_ORF_1__frame_1__translation[&!color=#cc0033]
+	Metaviridae_S9SHC_k141_55325_-_ORF_1__frame_2__translation[&!color=#cc0033]
+	'Metaviridae_WNO13902.1_Breu_errantivirus_Anopheles_darlingi'
+	'Metaviridae_WNO13945.1_Pitica_errantivirus_Anopheles_darlingi'
+	'Metaviridae_WP_171480118.1_Acinetobacter_baumannii_'
+	'Metaviridae_XP_002431503.1_Pediculus_humanus_corporis_'
+	'Metaviridae_XP_049466988.1_Anopheles_coluzzii_'
+	'Metaviridae_XP_055630413.1_Toxorhynchites_rutilus_septentrionalis_'
+	'Metaviridae_XQZ69181_Metavirus_sp._'
+	QPN53536_White_sucker_hepatitis_B_virus_Catostomus_commersonii
+	QXP00719_Blueberry_red_ringspot_virus_Vaccinium_corymbosum__blueberry_
+	UML14526_Viola_yellow_mottle_virus_Viola_verecunda
+	WGL40900_Parrot_hepatitis_B_virus_Trichoglossus_moluccanus
+	WLN26312_Ectodini_metahepadnavirus_2_Enantiopus_melanogenys
+	WLN26316_African_cichlid_nackednavirus_2_Lamprologus_ocellatus
+	XUS41890_Cassava_vein_mosaic_virus_Manihot_esculenta
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (ABM21760_Cranberry_red_ringspot_virus_Vaccinium_macrocarpon:0.061347,QXP00719_Blueberry_red_ringspot_virus_Vaccinium_corymbosum__blueberry_:3.0E-6,((UML14526_Viola_yellow_mottle_virus_Viola_verecunda:0.705444,XUS41890_Cassava_vein_mosaic_virus_Manihot_esculenta:0.700895)[&bootstrap=84]:0.11401,((((DBA50956_Spiretrovirus_felis8835_Felis_catus:0.472568,'Metaviridae_XP_002431503.1_Pediculus_humanus_corporis_':0.249184)[&bootstrap=95]:0.122589,(Metaviridae_QBP37036_Lampyris_noctiluca_errantivirus_1_Lampyris_noctiluca__glowworm_:0.393299,((('Metaviridae_QPF16707.1_Aedes_aegypti_To_virus_1_Aedes_aegypti':0.212788,((Metaviridae_S2BBB_k141_96837_-_ORF_4__frame_3__translation:0.112421,((((Metaviridae_S2BBB_k141_113958_-_ORF_1__frame_3__translation:2.0E-6,Metaviridae_S9SHC_k141_55325_-_ORF_1__frame_2__translation:1.0E-6)[&bootstrap=80]:0.003586,Metaviridae_S6FTF_k141_51199_-_ORF_1__frame_1__translation:0.001464)[&bootstrap=97]:0.066167,Metaviridae_S13LMK_k141_12006_-_ORF_2__frame_2__translation:0.121493)[&bootstrap=69]:0.020002,Metaviridae_S2BBB_k141_35924_-_ORF_2__frame_2__translation:0.094723)[&bootstrap=83]:0.044348)[&bootstrap=92]:0.104408,(('Metaviridae_WNO13945.1_Pitica_errantivirus_Anopheles_darlingi':0.134287,'Metaviridae_XP_049466988.1_Anopheles_coluzzii_':0.627889)[&bootstrap=98]:0.086186,'Metaviridae_WP_171480118.1_Acinetobacter_baumannii_':0.286878)[&bootstrap=52]:0.014335)[&bootstrap=88]:0.087956)[&bootstrap=97]:0.131038,'Metaviridae_XP_055630413.1_Toxorhynchites_rutilus_septentrionalis_':1.617472)[&bootstrap=96]:0.079072,'Metaviridae_WNO13902.1_Breu_errantivirus_Anopheles_darlingi':0.366772)[&bootstrap=97]:0.134976)[&bootstrap=100]:0.2007)[&bootstrap=100]:0.338452,'Metaviridae_XQZ69181_Metavirus_sp._':0.722846)[&bootstrap=59]:0.116522,(AFR79239_Bovine_foamy_virus_Bos_taurus:0.872202,((BAD98246_Rous_sarcoma_virus_-_Schmidt-Ruppin_D_:0.853487,DBA62696_Marsupial_endogenous_betaretrovirus_1_Sminthopsis_crassicaudata:0.58364)[&bootstrap=100]:0.63126,((QPN53536_White_sucker_hepatitis_B_virus_Catostomus_commersonii:0.511656,(WGL40900_Parrot_hepatitis_B_virus_Trichoglossus_moluccanus:0.759285,WLN26312_Ectodini_metahepadnavirus_2_Enantiopus_melanogenys:0.837466)[&bootstrap=51]:0.170516)[&bootstrap=60]:0.296644,WLN26316_African_cichlid_nackednavirus_2_Lamprologus_ocellatus:0.523415)[&bootstrap=100]:1.205337)[&bootstrap=91]:0.284967)[&bootstrap=100]:0.517327)[&bootstrap=100]:0.337889)[&bootstrap=100]:0.757949);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="bootstrap";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="bootstrap";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=8;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=true;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="Midpoint";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+
