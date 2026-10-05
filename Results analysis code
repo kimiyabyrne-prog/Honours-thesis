@@ -183,13 +183,13 @@ viral_cols <- which(names(data_RPM) %in% c("Aliusviridae", "Chuviridae", "Dicist
                                              "Ghabrivirales", "Hareavirales", "Metaviridae",
                                              "Nodaviridae", "Orthomyxoviridae", "Orthototoviridae", 
                                              "Partitiviridae", "Parvoviridae", "Peribunyaviridae", 
-                                             "Phasmaviridae", "Picornaviridae", "Quinviridae", "Reovirales", "Rhabdoviridae", "Sedoreoviridae",  "Spiciviridae","Tombusviridae", "Virgaviridae", "Xinmoviridae"))
+                                             "Phasmaviridae", "Picornaviridae", "Qinviridae", "Reovirales", "Rhabdoviridae", "Sedoreoviridae",  "Spiciviridae","Tombusviridae", "Virgaviridae", "Xinmoviridae"))
 
 # Step 2: Calculate Shannon index per sample
 # vegan::diversity requires non-negative abundance values
 data_RPM$shannon <- diversity(data_RPM[, viral_cols], index = "shannon")
 
-# Step 3: Summarize Shannon index by Bird_order
+# Step 3: Summarize Shannon index by Land_use
 order_summary <- data_RPM %>%
   group_by(Land_use) %>%
   summarise(mean_shannon = mean(shannon),
@@ -200,13 +200,13 @@ order_summary <- data_RPM %>%
 # View summary table
 print(order_summary)
 
-# Step 4: Plot Shannon index per Bird_order
+# Step 4: Plot Shannon index per Land_use
 ggplot(data_RPM, aes(x = Land_use, y = shannon)) +
   geom_boxplot(fill = "skyblue", color = "black") +
   geom_jitter(width = 0.2, height = 0, alpha = 0.5) +
-  labs(title = "Shannon Diversity Index per Bird Order",
+  labs(title = "Shannon Diversity Index per Land use",
        y = "Shannon Diversity (H')",
-       x = "Bird Order") +
+       x = ("Land use") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
@@ -233,7 +233,7 @@ viral_cols <- which(names(data_RPM) %in% c("Negarnaviricota",                   
 # vegan::diversity requires non-negative abundance values
 data_RPM$shannon <- diversity(data_RPM[, viral_cols], index = "shannon")
 
-# Step 3: Summarize Shannon index by Bird_order
+# Step 3: Summarize Shannon index by Land_use
 order_summary <- data_RPM %>%
   group_by(Land_use) %>%
   summarise(mean_shannon = mean(shannon),
@@ -244,13 +244,13 @@ order_summary <- data_RPM %>%
 # View summary table
 print(order_summary)
 
-# Step 4: Plot Shannon index per Bird_order
+# Step 4: Plot Shannon index per Land_use
 ggplot(data_RPM, aes(x = Land_use, y = shannon)) +
   geom_boxplot(fill = "skyblue", color = "black") +
   geom_jitter(width = 0.2, height = 0, alpha = 0.5) +
   labs(title = "Shannon Diversity Index per Bird Order",
        y = "Shannon Diversity (H')",
-       x = "Bird Order") +
+       x = "Land use") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
@@ -296,16 +296,16 @@ stressplot(nmds) #dont do
 mds_points <- as.data.frame(nmds$points)
 mds_combined <- cbind(mds_points, Land_use = df_filtered$Land_use)
 
-# Step 9: NMDS plot coloured by bird order
+# Step 9: NMDS plot coloured by land use
 ggplot(mds_combined, aes(x = MDS1, y = MDS2, color = Land_use)) +
   geom_jitter(size = 3, width = 0.1, height = 0.1) +  # Add jitter
   stat_ellipse(type = "t", linetype = "dashed", size = 1) +
-  labs(title = "NMDS of Viral Communities by Bird Order",
+  labs(title = "NMDS of Viral Communities by land use",
        x = "NMDS1", y = "NMDS2") +
   theme_minimal() +
   theme(legend.title = element_blank())
 
-# Step 10: PERMANOVA testing effect of bird order on beta diversity
+# Step 10: PERMANOVA testing effect of land use on beta diversity
 set.seed(123)
 adonis_result <- adonis2(bray_dist ~ Land_use, data = df_filtered, permutations = 999)
 
@@ -352,16 +352,16 @@ stressplot(nmds) #dont do
 mds_points <- as.data.frame(nmds$points)
 mds_combined <- cbind(mds_points, Land_use = df_filtered$Land_use)
 
-# Step 9: NMDS plot coloured by bird order
+# Step 9: NMDS plot coloured by land use
 ggplot(mds_combined, aes(x = MDS1, y = MDS2, color = Land_use)) +
   geom_jitter(size = 3, width = 0.1, height = 0.1) +  # Add jitter
   stat_ellipse(type = "t", linetype = "dashed", size = 1) +
-  labs(title = "NMDS of Viral Communities by Bird Order",
+  labs(title = "NMDS of Viral Communities by land use",
        x = "NMDS1", y = "NMDS2") +
   theme_minimal() +
   theme(legend.title = element_blank())
 
-# Step 10: PERMANOVA testing effect of bird order on beta diversity
+# Step 10: PERMANOVA testing effect of land use on beta diversity
 set.seed(123)
 adonis_result <- adonis2(bray_dist ~ Land_use, data = df_filtered, permutations = 999)
 
